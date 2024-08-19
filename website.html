@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website</title>
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+    <style>
+        *{
+        text-decoration: none;
+        margin:0px;
+        padding:0px;
+        }
+        body{
+            background-color: beige;
+        }
+        .navbar{
+            background-color: #85FFBD;
+            background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+            font-family: Calibri;
+            padding-right: 15px;
+            padding-left: 15px;
+            box-shadow: 0px 10px 7px lightblue;
+        }
+        .navdiv{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        /* nav{
+            width:100%;
+            padding: 3rem;
+        } */
+        .logo a{
+            font-size: 35px;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+        }
+
+        li{
+            list-style: none;
+        }
+        li a{
+            color:while;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        /* button {
+            color:aqua;
+            font-weight: bold;
+            font-size: 15px;
+        } */
+
+        .btngrp{
+            display:flex;
+            justify-content:end;
+            /* margin: 7px; */
+            padding: 7px;
+            
+        }
+        #btn1{
+            border-radius: 8px;
+            background-color: rgb(135, 230, 111);
+            font-size: 20px;
+            justify-content: space-between;
+            padding: 11px;
+            
+        }
+        #btn2{
+            border-radius: 8px;
+            color: black;
+            background-color: rgb(237, 145, 63);
+            font-size: 20px;
+            padding: 5px;
+        }
+        #btn1:hover{
+            background-color: rgb(211, 111, 215);
+        }
+        #btn2:hover{
+            background-color: rgb(13, 232, 221);
+
+        }
+        #a{
+            display:flex;
+        }
+        
+        .footerBox{
+            background-color: #85FFBD;
+            background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+            /* color: black; */
+            width: 100%;
+            text-align: center;
+            min-height: 40px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .footer p{
+            color: black;
+            font-size: 2rem;
+        }
+
+        .contentBox{
+            width:50%;
+            margin: auto;
+            /* border: 1px solid black; */
+            background-color: white;
+            /* padding:5px; */
+            padding: 3rem;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #A9C9FF;
+            background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+
+            display: flex;
+            flex-direction: column;  
+            gap:100px;
+
+            box-shadow: 1px 1px 30px black;
+        }
+        .item{
+            display:flex;
+            justify-content: space-around;
+            /* justify-content: space-between; */
+            align-items: center;
+        }
+        .rightBox{
+            position:relative;
+            overflow: hidden;
+            transition: all 0.3s linear 0s;
+
+            box-shadow: 1px 1px 10px black;
+            border-radius: 20px;
+        }
+        .rightBox img{
+            height: 400px;
+            border-radius: 20px;
+            transition: all 0.6s linear 0s;
+        }
+        .rightBox:hover{
+            transform: scale(1.1);
+        }
+        .leftBox{
+            display:flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        .leftBox h2{
+            font-size: 2rem;
+        }
+        .ingredientBox{
+            font-size: 1.3rem;
+        }
+        .recipeBox{
+            font-size: 1.1rem;
+        }
+
+        .rightBox .overlay{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 100%;
+            width:100%;
+            background-color: rgba(79, 77, 77, 0.708);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            opacity: 0 ;
+
+            transition: all 0.3s linear 0s;
+
+        }
+
+        .rightBox:hover .overlay{
+            opacity: 1;
+        }
+        .rightBox .overlay span{
+            color: white;
+            font-size: 1.2rem;
+        }
+       
+    </style> 
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <div class="logo">
+                        <a href="#">Vaishnavi Kumari</a>
+                    </div>
+                    <ul id="a">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="btngrp">
+                    <button id="btn1"><a href="#">SignIn</a></button>&nbsp;&ensp;&emsp;
+                    <button id="btn2"><a href="#">SignOut</a></button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="contentBox">
+                <section>
+                    <div class="item">
+                        <div class="leftBox">
+                            <h2>Gulab Jamun</h2>
+                            <h2>Ingredients</h2>
+                            <ul class="ingredientBox">
+                                <li>Sugar</li>
+                                <li>Bread</li>
+                                <li>Oil</li>
+                            </ul>
+                            <h2>Recipe</h2>
+                            <ol>
+                                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, eveniet.</li>
+                                <li>Lorem ipsum dolor sit.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            </ol>
+                        </div>
+                        <div class="rightBox">
+                            <img src="bread-gulab-jamun-recipe.jpg" alt="" height="150px" width="200px"/>
+                            <div class="overlay">
+                                <span>Click here to Buy</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="item">
+                        <div class="leftBox">
+                            <h2>Barfi Meethai</h2>
+                            <h2>Ingredients</h2>
+                            <ul class="ingredientBox">
+                                <li>Sugar</li>
+                                <li>Bread</li>
+                                <li>Oil</li>
+                            </ul>
+                            <h2>Recipe</h2>
+                            <ol class="recipeBox">
+                                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, eveniet.</li>
+                                <li>Lorem ipsum dolor sit.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="rightBox">
+                            <img src="Magaz-5-of-5-2-960x1440.jpg" alt=""  height="150px" width="200px">
+                            <div class="overlay">
+                                <span>Click here to Buy</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+        </main>
+
+        <footer>
+            <div class="footerBox">
+                <p>Vaishnavi Kumari © Pvt Ltd 2034 All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
